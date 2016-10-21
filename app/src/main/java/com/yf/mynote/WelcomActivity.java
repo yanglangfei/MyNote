@@ -7,13 +7,10 @@ import android.os.Handler;
 import android.widget.ImageView;
 
 import com.yf.mynote.db.MyDbHelp;
-
 /**
  * Created by Administrator on 2016/10/8.
  */
-
 public class WelcomActivity extends Activity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
