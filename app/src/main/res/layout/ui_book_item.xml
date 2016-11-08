@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                android:padding="10dp"
+    android:layout_height="150dp">
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="60dp"
+        android:id="@+id/bookImg"
+        android:layout_centerVertical="true"
+        android:layout_height="60dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bookImg"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/bookTitle"
+        android:text="title"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookAuth"
+            android:layout_alignParentBottom="true"
+            android:text="张三"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:22"
+            android:id="@+id/bookTime"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/bookAuth"
+            android:layout_alignParentBottom="true"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

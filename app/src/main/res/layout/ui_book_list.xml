@@ -4,9 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <include layout="@layout/ui_titlebar"></include>
-    <GridView
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="3"
-        android:id="@+id/gv_books"></GridView>
+        android:id="@+id/gv_books"></ListView>
 </LinearLayout>
