@@ -11,6 +11,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yf.mynote.R;
@@ -28,24 +29,26 @@ import java.io.IOException;
  * Created by Administrator on 2016/10/9.
  */
 
-public class BookDetail extends Activity {
+public class BookDetail extends Activity implements View.OnClickListener {
     private TextView mDetailTitle;
     private WebView mBookDetailBody;
+    private ImageView mIvFinish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_book_del);
         //安全设置  禁止进行屏幕捕捉   ----防止对屏幕进行截取
-        this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
+       // this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
         initView();
     }
 
     private void initView() {
-
+        mIvFinish = (ImageView) findViewById(R.id.ivFinish);
         mDetailTitle = (TextView) findViewById(R.id.detailTitle);
         mBookDetailBody = (WebView) findViewById(R.id.bookDetailBody);
         final WebSettings setting = mBookDetailBody.getSettings();
+        mIvFinish.setOnClickListener(this);
         setting.setBlockNetworkImage(true);
         mBookDetailBody.setWebViewClient(new WebViewClient(){
             @Override
@@ -58,7 +61,12 @@ public class BookDetail extends Activity {
         new GetDetail().execute(link);
     }
 
-      class  GetDetail extends AsyncTask<String,Void,Book>{
+    @Override
+    public void onClick(View v) {
+        this.finish();
+    }
+
+    class  GetDetail extends AsyncTask<String,Void,Book>{
 
           @Override
           protected Book doInBackground(String... params) {

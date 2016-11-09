@@ -1,5 +1,6 @@
 package com.yf.mynote.utils;
 
+import android.provider.Settings;
 import android.util.Log;
 
 import com.yf.mynote.model.Book;
@@ -36,7 +37,8 @@ public class JsonpUtils {
             book.setAuto(auth);
             book.setLink(link);
             book.setImage(img);
-            book.setTime(time);
+            String t=time.split("T")[0];
+            book.setTime(t);
             books.add(book);
         }
         return books;

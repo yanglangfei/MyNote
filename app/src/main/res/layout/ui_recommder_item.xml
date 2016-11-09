@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:padding="20dp"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:id="@+id/recIcon"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/recIcon"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:id="@+id/recoTitle"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_below="@+id/recoTitle"
+    android:layout_alignLeft="@+id/recoTitle"
+    android:id="@+id/recCata"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/recCata"
+        android:layout_alignLeft="@+id/recCata"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recTags"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/recIcon"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recSub1"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/sub2Lay"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/recSub1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:id="@+id/recSub2"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/more"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/more"/>
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/sub2Lay"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recRead"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_below="@+id/recRead"
+    android:layout_marginTop="10dp"
+    android:id="@+id/recOnline"
+    android:autoLink="web"
+    android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/recOnline"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recTime"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>

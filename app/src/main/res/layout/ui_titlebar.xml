@@ -4,16 +4,25 @@
     android:background="#e32767b6"
     android:layout_height="50dp">
 
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/ivFinish"
+        android:src="@drawable/ret"/>
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"
-        android:onClick="onAdd"
-        android:textColor="@android:color/white"
-        android:background="#e32767b6"
-        android:text="add"/>
+        android:id="@+id/addBtn"
+        android:visibility="gone"
+        android:src="@drawable/jfr"
+        />
 
 
 

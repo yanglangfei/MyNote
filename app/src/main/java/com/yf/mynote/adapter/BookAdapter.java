@@ -67,7 +67,7 @@ public class BookAdapter extends BaseAdapter{
         TextView mBookAuth = (TextView) view.findViewById(R.id.bookAuth);
         TextView mBookTime = (TextView) view.findViewById(R.id.bookTime);
         Book book=books.get(i);
-        Glide.with(context).load(book.getImage()).asBitmap().diskCacheStrategy(DiskCacheStrategy.SOURCE).placeholder(R.drawable.welcom).into(mBookImg);
+        Glide.with(context).load(book.getImage()).asBitmap().diskCacheStrategy(DiskCacheStrategy.SOURCE).placeholder(R.drawable.def).into(mBookImg);
         mBookTitle.setText(book.getTitle());
         mBookAuth.setText(book.getAuto());
         mBookTime.setText(book.getTime());

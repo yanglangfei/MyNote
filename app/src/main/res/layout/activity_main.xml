@@ -1,14 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_main"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-  >
+              android:orientation="vertical"
+              android:background="@android:color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
     <include layout="@layout/ui_titlebar"></include>
-    <ListView
+
+    <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
-        android:id="@+id/lv_note"
-        android:layout_height="wrap_content">
-    </ListView>
+        android:layout_height="0dp"
+        android:id="@+id/mainVp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"></View>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/mainGroup"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/qxLay"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/mwIcon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/mw_no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/mwIcon"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:id="@+id/mwLabe"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="美文"/>
+
+        </RelativeLayout>
+        <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#cccccc"></View>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/xqLay"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/xqIcon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/xq_no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/xqIcon"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:id="@+id/mtLabe"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="心情"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc"></View>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/hsLay"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/hsIcon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/book_no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/hsIcon"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:id="@+id/hsLabe"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="好书"/>
+        </RelativeLayout>
+    </RadioGroup>
+
+
 </LinearLayout>
