@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">美文</string>
+    <string name="app_name">iRead</string>
     <string name="index">index</string>
     <string name="textView">text</string>
 </resources>
