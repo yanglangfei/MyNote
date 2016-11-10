@@ -34,10 +34,6 @@ import com.yf.mynote.model.Note;
 
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- *   展示日志
- */
 public class MainActivity extends FragmentActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
     private ViewPager mMainVp;
     private RelativeLayout mQxLay;
